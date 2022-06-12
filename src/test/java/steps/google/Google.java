@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Google extends ScenarioSteps {
     @Managed(driver = "Chrome")
-    WebDriver browser;
+    WebDriver webDriver;
 
     @Before
     public void setTheStage() {
@@ -25,9 +25,11 @@ public class Google extends ScenarioSteps {
     @Given("{string} Go to url {string}")
     public void go_to_url(String actor, String url) {
         WebDriverManager.chromedriver().setup();
-        browser = new ChromeDriver();
-        OnStage.theActorCalled(actor).whoCan(BrowseTheWeb.with(browser))
-                .attemptsTo(Open.url(url)
-        );
+        webDriver = new ChromeDriver();
+        webDriver.get(url);
+//        OnStage.theActorCalled(actor).whoCan(BrowseTheWeb.with(webDriver))
+//                .attemptsTo(Open.url(url)
+//        );
+        webDriver.close();
     }
 }
