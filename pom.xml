@@ -28,6 +28,11 @@
         <log4j.version>2.17.2</log4j.version>
         <javafaker.version>1.0.2</javafaker.version>
 
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <encoding>UTF-8</encoding>
+        <parallel.tests>1</parallel.tests>
+        <appiumJavaClient>7.3.0</appiumJavaClient>
+
     </properties>
 
     <dependencies>
